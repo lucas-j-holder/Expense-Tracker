@@ -14,3 +14,15 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+from ui import UI_MainWindow
+from PyQt6.QtWidgets import QApplication, QMainWindow
+import sys
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    qmainwindow = QMainWindow()
+    main_window = UI_MainWindow.Ui_MainWindow()
+    main_window.setupUi(qmainwindow)
+
+    qmainwindow.show()
+
+    sys.exit(app.exec())
