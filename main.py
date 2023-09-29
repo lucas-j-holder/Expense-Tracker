@@ -14,15 +14,38 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from ui import UI_MainWindow
-from PyQt6.QtWidgets import QApplication, QMainWindow
+from ui.Ui_MainWindow import Ui_MainWindow
+from ui.EditFinancial import EditFinancial
+from logic.EditFinancialDialog import EditFinancialDialog
+from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget
 import sys
+window = None
+
+
+class Expense_Tracker(QMainWindow):
+    def __init__(self, parent = None):
+        super().__init__(parent)
+        self.main_ui = Ui_MainWindow()
+        self.main_ui.setupUi(self)
+        self.main_ui.expense_new.clicked.connect(lambda:self.create_financial_window())
+        self.show()
+
+    def create_financial_window(self):
+      window = EditFinancialDialog(self)
+      window.exec()
+
+
+
+
+    
+    # return EditFinancial()
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    qmainwindow = QMainWindow()
-    main_window = UI_MainWindow.Ui_MainWindow()
-    main_window.setupUi(qmainwindow)
-
-    qmainwindow.show()
+    window = Expense_Tracker()
+    # qmainwindow = QMainWindow()
+    # main_window.setupUi(qmainwindow)
+    # window = None
+    
+    # qmainwindow.show()
 
     sys.exit(app.exec())
