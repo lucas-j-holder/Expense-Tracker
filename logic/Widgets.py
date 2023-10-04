@@ -16,7 +16,7 @@
 
 from PyQt6.QtWidgets import QDialog, QWidget
 from ui.Ui_EditFinancial import Ui_EditFinancial
-from logic.Models import FinancialModel
+from logic.Models import FinancialModel, IncomeModel, ExpenseModel, InvestmentModel
 from logic.enums import Frequencies, CompoundFrequencies
 from multimethod import multimethod, overload
 from ui.Ui_EditInvestment import Ui_EditInvestment
@@ -57,9 +57,9 @@ class IncomeTableDisplayWidget(ExpenseTableWithButtonsWidget):
   
 class InvestmentTableDisplayWidget(QWidget):
   def show_new_menu(self):
-    return EditFinancialDialog(self)
+    return EditInvestmentDialog(self)
   def show_edit_menu(self):
-    return EditFinancialDialog(FinancialModel(), self)
+    return EditInvestmentDialog(InvestmentModel(), self)
   def __init__(self, parent=None):
     super().__init__(parent)
     self.ui = Ui_ExpenseTableWithButtons()
@@ -72,6 +72,7 @@ class InvestmentTableDisplayWidget(QWidget):
 
 
 class EditInvestmentDialog(QDialog):
+  @overload
   def __init__(self, parent : QWidget=None):
     super().__init__(parent)
     self.ui = Ui_EditInvestment()
@@ -80,16 +81,18 @@ class EditInvestmentDialog(QDialog):
       self.ui.additional_contribution_frequency.addItem(pair.name, pair.value)
     for pair in CompoundFrequencies:
       self.ui.compound_frequency.addItem(pair.name, pair.value)
-  
-  def __init__(self, model:FinancialModel, parent: QWidget=None):
+    self.exec()
+  @overload
+  def __init__(self, model:InvestmentModel, parent: QWidget=None):
     super().__init__(parent)
+    print("Edit Investment")
     self.ui = Ui_EditInvestment()
     self.ui.setupUi(self)
     for pair in Frequencies:
       self.ui.additional_contribution_frequency.addItem(pair.name, pair.value)
     for pair in CompoundFrequencies:
       self.ui.compound_frequency.addItem(pair.name, pair.value)
-
+    self.exec()
 
 class EditFinancialDialog(QDialog):
   @overload
