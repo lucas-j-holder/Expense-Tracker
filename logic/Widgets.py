@@ -71,7 +71,7 @@ class InvestmentTableDisplayWidget(QWidget):
     self.ui.expense_edit.clicked.connect(lambda: self.show_edit_menu())
 
 
-class EditFinancialDialog(QDialog):
+class EditInvestmentDialog(QDialog):
   def __init__(self, parent : QWidget=None):
     super().__init__(parent)
     self.ui = Ui_EditInvestment()
