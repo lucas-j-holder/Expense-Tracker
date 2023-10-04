@@ -29,6 +29,7 @@ class Expense_Tracker(QMainWindow):
         table = widget(None)
         tab.layout().addWidget(table)
         return table
+    
     def __init__(self, parent = None):
         super().__init__(parent)
         self.main_ui = Ui_MainWindow()

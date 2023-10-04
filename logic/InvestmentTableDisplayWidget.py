@@ -27,5 +27,8 @@ class InvestmentTableDisplayWidget(QWidget):
     super().__init__(parent)
     self.ui = Ui_ExpenseTableWithButtons()
     self.ui.setupUi(self)
+    columns = ["Name", "Principal", "Return Rate", "Compound Freq.", "Add. Contrib.", "Add. Contrib. Freq."]
+    self.ui.expense_table.setColumnCount(len(columns))
+    self.ui.expense_table.setHorizontalHeaderLabels(columns)
     self.ui.expense_new.clicked.connect(lambda: self.show_new_menu())
     self.ui.expense_edit.clicked.connect(lambda: self.show_edit_menu())
