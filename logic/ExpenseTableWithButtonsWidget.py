@@ -21,3 +21,6 @@ class ExpenseTableWithButtonsWidget(QWidget):
     super().__init__(parent)
     self.ui = Ui_ExpenseTableWithButtons()
     self.ui.setupUi(self)
+    columns = ["Name", "Amount", "Category", "Frequency"]
+    self.ui.expense_table.setColumnCount(len(columns))
+    self.ui.expense_table.setHorizontalHeaderLabels(columns)
