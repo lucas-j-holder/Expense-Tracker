@@ -1,4 +1,4 @@
-# Expense Tracker - Expense Tracking Program - ExpenseTableWithButtonsWidget.py
+# Expense Tracker - Expense Tracking Program - InvestmentModel.py
 # Copyright (C) 2023 Lucas Holder - lucas.j.holder@gmail.com
 
 # This program is free software: you can redistribute it and/or modify
@@ -14,10 +14,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from PyQt6.QtWidgets import QWidget
-from ui.Ui_ExpenseTableWithButtons import Ui_ExpenseTableWithButtons
-class ExpenseTableWithButtonsWidget(QWidget):
-  def __init__(self, parent=None):
-    super().__init__(parent)
-    self.ui = Ui_ExpenseTableWithButtons()
-    self.ui.setupUi(self)
+from enums import CompoundFrequencies
+
+class InvestmentModel():
+  def __init__():
+    pass

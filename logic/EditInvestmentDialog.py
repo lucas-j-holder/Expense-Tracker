@@ -1,8 +1,8 @@
 from PyQt6.QtWidgets import QDialog, QWidget
 from ui.Ui_EditInvestment import Ui_EditInvestment
 from logic.models.FinancialModel import FinancialModel
-from logic.enums.Frequencies import Frequencies
-from logic.enums.CompoundFrequencies import CompoundFrequencies
+from logic.enums import Frequencies
+from logic.enums import CompoundFrequencies
 class EditFinancialDialog(QDialog):
   def __init__(self, parent : QWidget=None):
     super().__init__(parent)

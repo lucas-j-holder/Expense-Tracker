@@ -1,7 +1,7 @@
 from PyQt6.QtWidgets import QDialog, QWidget
 from ui.Ui_EditFinancial import Ui_EditFinancial
 from logic.models.FinancialModel import FinancialModel
-from logic.enums.Frequencies import Frequencies
+from logic.enums import Frequencies
 from multimethod import multimethod, overload
 
 
