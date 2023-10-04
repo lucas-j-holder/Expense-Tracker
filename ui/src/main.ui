@@ -6,145 +6,148 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>835</width>
-    <height>333</height>
+    <width>669</width>
+    <height>684</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <property name="spacing">
-       <number>0</number>
-      </property>
-      <item>
-       <widget class="QTabWidget" name="tablesDisplayWidget">
-        <property name="minimumSize">
-         <size>
-          <width>411</width>
-          <height>291</height>
-         </size>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>651</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QTabWidget" name="tablesDisplayWidget">
+       <property name="minimumSize">
+        <size>
+         <width>411</width>
+         <height>291</height>
+        </size>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="income">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
-        <property name="currentIndex">
-         <number>2</number>
-        </property>
-        <widget class="QWidget" name="income">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
+        <attribute name="title">
+         <string>Income</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <property name="leftMargin">
+          <number>0</number>
          </property>
-         <attribute name="title">
-          <string>Income</string>
-         </attribute>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <property name="leftMargin">
-           <number>0</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="expense">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
+         <property name="topMargin">
+          <number>0</number>
          </property>
-         <attribute name="title">
-          <string>Expense</string>
-         </attribute>
-         <layout class="QHBoxLayout" name="horizontalLayout_5">
-          <property name="leftMargin">
-           <number>0</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="investments">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
+         <property name="rightMargin">
+          <number>0</number>
          </property>
-         <attribute name="title">
-          <string>Investments</string>
-         </attribute>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <property name="leftMargin">
-           <number>0</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
-         </layout>
-        </widget>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+        </layout>
        </widget>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>13</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QWidget" name="plot_widget" native="true">
-          <property name="minimumSize">
-           <size>
-            <width>396</width>
-            <height>271</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
-   </layout>
+       <widget class="QWidget" name="expense">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <attribute name="title">
+         <string>Expense</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="investments">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <attribute name="title">
+         <string>Investments</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>13</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QWidget" name="plot_widget" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>396</width>
+           <height>271</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>835</width>
+     <width>669</width>
      <height>22</height>
     </rect>
    </property>
