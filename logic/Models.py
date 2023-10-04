@@ -31,7 +31,7 @@ class ExpenseModel(FinancialModel):
     super().__init__(name=name, amount=amount, category=category, frequency=frequency)
     
 class InvestmentModel():
-  def __init__(self, name:str, principal:float, return_rate:float, compound_frequency:CompoundFrequencies, additional_contribution:float, additional_contribution_frequency:Frequencies):
+  def __init__(self, name:str="", principal:float=0.0, return_rate:float=0.0, compound_frequency:CompoundFrequencies=CompoundFrequencies.Annually, additional_contribution:float=0.0, additional_contribution_frequency:Frequencies=Frequencies.Biweekly):
     self.name = name
     self.principal = principal
     self.return_rate = return_rate
