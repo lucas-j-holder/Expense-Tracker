@@ -15,10 +15,9 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from ui.Ui_MainWindow import Ui_MainWindow
-from logic.EditFinancialDialog import EditFinancialDialog
-from logic.IncomeTableDisplayWidget import IncomeTableDisplayWidget
-from logic.ExpenseTableDisplayWidget import ExpenseTableDisplayWidget
-from logic.InvestmentTableDisplayWidget import InvestmentTableDisplayWidget
+from logic.Widgets import IncomeTableDisplayWidget
+from logic.Widgets import ExpenseTableDisplayWidget
+from logic.Widgets import InvestmentTableDisplayWidget
 from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget
 import sys
 window = None
@@ -40,9 +39,9 @@ class Expense_Tracker(QMainWindow):
         # self.main_ui.expense_new.clicked.connect(lambda:self.create_financial_window())
         self.show()
 
-    def create_financial_window(self):
-      window = EditFinancialDialog(self)
-      window.exec()
+    # def create_financial_window(self):
+    #   window = EditFinancialDialog(self)
+    #   window.exec()
 
 
 
