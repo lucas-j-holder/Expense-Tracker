@@ -15,19 +15,28 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from ui.Ui_MainWindow import Ui_MainWindow
-from ui.EditFinancial import EditFinancial
 from logic.EditFinancialDialog import EditFinancialDialog
+from logic.IncomeTableDisplayWidget import IncomeTableDisplayWidget
+from logic.ExpenseTableDisplayWidget import ExpenseTableDisplayWidget
+from logic.InvestmentTableDisplayWidget import InvestmentTableDisplayWidget
 from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget
 import sys
 window = None
 
 
 class Expense_Tracker(QMainWindow):
+    def add_expense_table_to_tabbed_widget(self, tab, widget):
+        table = widget(None)
+        tab.layout().addWidget(table)
+        return table
     def __init__(self, parent = None):
         super().__init__(parent)
         self.main_ui = Ui_MainWindow()
         self.main_ui.setupUi(self)
-        self.main_ui.expense_new.clicked.connect(lambda:self.create_financial_window())
+        self.income_table = self.add_expense_table_to_tabbed_widget(self.main_ui.income, IncomeTableDisplayWidget)
+        self.expense_table = self.add_expense_table_to_tabbed_widget(self.main_ui.expense, ExpenseTableDisplayWidget)
+        self.investment_table = self.add_expense_table_to_tabbed_widget(self.main_ui.investments, InvestmentTableDisplayWidget)
+        # self.main_ui.expense_new.clicked.connect(lambda:self.create_financial_window())
         self.show()
 
     def create_financial_window(self):
